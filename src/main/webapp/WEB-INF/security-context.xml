@@ -1,0 +1,48 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                    http://www.springframework.org/schema/security 
+                    http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+    
+    
+
+	
+    
+    <!-- We will be defining all security related configurations in this file -->
+    <http pattern="/index" security="none"></http>
+	<http pattern="/css/*" security="none"></http>
+    <http pattern="/imgs/*" security="none"></http>
+    <http pattern="/scripts/*" security="none"></http>
+    
+   
+    <http use-expressions="true">
+        <intercept-url pattern="/**" access="isAuthenticated()"/> <!-- this means all URL in this app will be checked if user is authenticated -->
+        <form-login login-page="/page" default-target-url="/page" authentication-failure-url="/page"/> <!-- We will just use the built-in form login page in Spring -->
+        <logout logout-url="/page" logout-success-url="/page"/> <!-- the logout url we will use in JSP -->
+    </http>
+    
+    
+    
+    <beans:bean id="authenticationProvider"
+    class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+    <beans:property name="userDetailsService" ref="userDetailsService"/>
+	</beans:bean>
+
+
+
+	<beans:bean id="authenticationManager"
+	    class="org.springframework.security.authentication.ProviderManager">
+	    <beans:property name="providers">
+	        <beans:list>
+	            <beans:ref local="authenticationProvider" />
+	        </beans:list>
+	    </beans:property>
+	</beans:bean> 
+	
+	<authentication-manager>
+	    <authentication-provider user-service-ref="userDetailsService"></authentication-provider>
+	</authentication-manager>  
+    
+</beans:beans>

@@ -1,0 +1,172 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>WebApp</groupId>
+  <artifactId>FC</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>FC Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <dependencies>
+  
+<dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+ 
+   <!-- Spring MVC -->
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-core</artifactId>
+	    <version>4.0.9.RELEASE</version>
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/org.springframework.session/spring-session -->
+	<dependency>
+	    <groupId>org.springframework.session</groupId>
+	    <artifactId>spring-session</artifactId>
+	    <version>1.0.0.RELEASE</version>
+	</dependency>
+  
+ 	<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-web</artifactId>
+	    <version>4.0.9.RELEASE</version>
+	</dependency>
+ 
+ 	<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	    <version>4.0.9.RELEASE</version>
+	</dependency>
+	 <!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-context-support</artifactId>
+	    <version>4.1.0.RELEASE</version>
+	</dependency>
+	 
+  
+  		<!-- Hibernate resources -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>3.6.7.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>4.3.0.Final</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-commons-annotations</artifactId>
+				<version>3.3.0.ga</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-annotations</artifactId>
+				<version>3.3.1.GA</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>3.3.2.GA</version>
+			</dependency>
+			<dependency>
+				<groupId>taglibs</groupId>
+				<artifactId>standard</artifactId>
+				<version>1.1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>jstl</artifactId>
+				<version>1.1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-dbcp</groupId>
+				<artifactId>commons-dbcp</artifactId>
+				<version>20030825.184428</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-pool</groupId>
+				<artifactId>commons-pool</artifactId>
+				<version>20030825.183949</version>
+			</dependency>
+		    <dependency>
+		        <groupId>net.sf.ehcache</groupId>
+		        <artifactId>ehcache</artifactId>
+		        <version>2.6.0</version>
+		        <type>pom</type>
+		        <scope>test</scope>
+		    </dependency>
+			<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-ehcache -->
+			<dependency>
+			    <groupId>org.hibernate</groupId>
+			    <artifactId>hibernate-ehcache</artifactId>
+			    <version>5.2.10.Final</version>
+			</dependency>
+			
+				    
+  	<!-- MySQL -->
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.6</version>
+	</dependency>
+  
+	  <dependency>
+	    <groupId>com.fasterxml.jackson.jaxrs</groupId>
+	    <artifactId>jackson-jaxrs-json-provider</artifactId>
+	    <version>2.1.1</version>
+	  </dependency>
+
+	<!-- Apache Commons FileUpload --> 
+	<dependency>
+		<groupId>commons-fileupload</groupId>
+		<artifactId>commons-fileupload</artifactId>
+		<version>1.3.1</version>
+	</dependency>
+	
+	<!-- Apache Commons IO --> 
+	<dependency>
+		<groupId>commons-io</groupId>
+		<artifactId>commons-io</artifactId>
+		<version>2.4</version>
+	</dependency>
+	   
+	<!-- excel -->
+	<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi</artifactId>
+		<version>3.12</version>
+	</dependency>
+	<!-- excel 2007 over-->
+	<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi-ooxml</artifactId>
+		<version>3.12</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/javainetlocator/inetaddresslocator -->
+	<dependency>
+	    <groupId>javainetlocator</groupId>
+	    <artifactId>inetaddresslocator</artifactId>
+	    <version>2.18</version> 
+	</dependency>
+ 
+  </dependencies>
+
+
+  <build>
+    <finalName>FC</finalName>
+  </build>
+
+</project>

@@ -1,0 +1,63 @@
+<!DOCTYPE hibernate-configuration SYSTEM
+     "classpath://org/hibernate/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+    <session-factory>
+	
+	
+        <!-- JDBC Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/movielense1m</property> 
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
+
+
+        <!-- JDBC connection pool settings ... using built-in test pool -->
+        <property name="connection.pool_size">1</property>
+
+
+
+        <!-- Select our SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+
+
+		<!-- second Level Cache -->
+		<property name="cache.provaider_Class">	org.hibernate.cache.EhCacheProvider</property>
+		
+
+
+        <!-- Echo the SQL to stdout -->
+        <property name="show_sql">false</property>
+
+
+
+		<!-- Set the current session context -->
+	<!--  <property name="current_session_context_class"></property>-->	
+		
+
+		
+		<!-- Create the table of Entity Automatic -->
+		<property name="hbm2ddl.auto">update</property>
+		<property name="hibernate.cache.region.factory_class">
+     org.hibernate.cache.ehcache.EhCacheRegionFactory </property>
+	<property name="hibernate.cache.region.factory_class">
+         org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory</property>
+         
+		<property name="hibernate.cache.use_second_level_cache">true</property>
+			
+		 		<!-- Close automatic the session -->
+ 		<property name='transaction.auto_close_session'>false</property>
+ 		
+
+ 		
+ 		<!-- Mapping les Entity -->
+ 		<mapping class="module.User"/>
+ 		<mapping class="module.Info"/>
+ 		<mapping class="module.ItemRating"/>
+ 		<mapping class="module.Item"/>
+ 		
+ 
+    </session-factory>
+
+</hibernate-configuration>
