@@ -1,2 +1,2 @@
-# Multi-Recomandition-systeme-tests-MovieLens-JEE
-Multi Recomandition systeme tests - MovieLens - JEE
+# Collaborative filtering algorithms evaluations with MovieLens DB - JEE
+   
